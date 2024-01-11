@@ -1,16 +1,15 @@
 import Link from "next/link"
 
-
 function Services() {
   return (
     <section className="w-full h-full">
-      <div className="pt-20 pb-8 lg:px-16 px-4 text-center m-auto flex items-center justify-center">
-        <h2 className="section_heading_text max-w-[800px] text-black">
+      <div className="pt-20 pb-4 lg:pb-8 lg:px-16 px-4 text-center m-auto flex items-center justify-center">
+        <h2 className="section_text_title max-w-[800px] text-black">
           Stillbroke Services
         </h2>
       </div>
       
-      <div className="container custom_grid gap-2 py-12 lg:px-16 md:px-8 px-4 overflow-x-auto">
+      <div className="container custom_grid gap-2 pt-4 lg:pt-8 pb-12 lg:px-16 md:px-8 px-4 overflow-x-auto">
         <div className="col_12 flex flex-row overflow-x-auto gap-10 w-full">
           <section className="services_card">
             <figure className="bg-white m-0">
@@ -61,7 +60,7 @@ function Services() {
 
             <div 
               tabIndex={-1} 
-              className="flex flex-col items-center flex-grow-[2] flex-shrink basis-[0%] mx-4 mb-8"
+              className="flex flex-col items-center flex-grow-[2] flex-shrink basis-[0%] mb-8"
             >
               <h5 className="uppercase font-bold lg:text-base text-sm lg:leading-normal leading-none whitespace-break-spaces">
                 Personalization
@@ -138,7 +137,7 @@ function Services() {
 
             <div 
               tabIndex={-1} 
-              className="flex flex-col items-center flex-grow-[2] flex-shrink basis-[0%] mx-4 mb-8"
+              className="flex flex-col items-center flex-grow-[2] flex-shrink basis-[0%] mb-8"
             >
               <h5 className="uppercase font-bold lg:text-base text-sm lg:leading-normal leading-none whitespace-break-spaces">
                 Packaging
@@ -219,7 +218,7 @@ function Services() {
 
             <div 
               tabIndex={-1} 
-              className="flex flex-col items-center flex-grow-[2] flex-shrink basis-[0%] mx-4 mb-8"
+              className="flex flex-col items-center flex-grow-[2] flex-shrink basis-[0%] mb-8"
             >
               <h5 className="uppercase font-bold lg:text-base text-sm lg:leading-normal leading-none whitespace-break-spaces">
                 Collect In Store

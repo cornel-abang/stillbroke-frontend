@@ -6,7 +6,7 @@ import Image from "next/image";
 import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
 import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
 
-import { mayWeHelpYou, stillbrokeServices, theCompany } from "../../../constants/index";
+import { mayWeHelpYou, stillbrokeServices, theCompany } from "../../constants/index";
 
 function Footer() {
   const [toggle1, setToggle1] = useState(false);
