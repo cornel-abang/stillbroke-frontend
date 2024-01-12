@@ -33,7 +33,7 @@ function Hero() {
           <div>
             <h2 className="section_text_title hero_text_title">Stillbroke Valigeria</h2>
 
-            <span className="inline-block max-w-36">
+            <span className="inline-block max-w-fit">
               <Link href="/#" className="cta bg-black text-white opacity-100 py-4 px-6">
                 Explore Now
               </Link>
