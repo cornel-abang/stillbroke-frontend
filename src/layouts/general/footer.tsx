@@ -6,7 +6,7 @@ import Image from "next/image";
 import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
 import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
 
-import { mayWeHelpYou, stillbrokeServices, theCompany } from "../../constants/index";
+import { MayWeHelpYouItems, StillbrokeServicesItems, TheCompanyItems } from "../../constants/index";
 
 function Footer() {
   const [toggle1, setToggle1] = useState(false);
@@ -33,7 +33,7 @@ function Footer() {
   
   return (
     <footer className="w-full h-full bg-black text-white">
-      <section className="container lg:px-16 md:px-8 px-4 py-0">
+      <section className="container xl:px-16 md:px-6 px-4 py-0">
         <div className="lg:py-20 py-12 relative">
           <div className="lg:gap-x-6 gap-x-2 lg:gap-y-0 gap-y-20 custom_grid">
             <div className="block col_lg_6 col_12">
@@ -48,8 +48,8 @@ function Footer() {
                     </div>
 
                     <div className="footer_text_wrapper">
-                      {mayWeHelpYou.map((item, index) => (
-                        <div key={item.text} className={`${index === mayWeHelpYou.length - 1 ? 'pb-12' : 'pb-6'}`}>
+                      {MayWeHelpYouItems.map((item, index) => (
+                        <div key={item.text} className={`${index === MayWeHelpYouItems.length - 1 ? 'pb-12' : 'pb-6'}`}>
                           <Link href={item.href} className="footer_text text_hover_underline text_hover_underline_white">
                             {item.text}
                           </Link>
@@ -65,7 +65,7 @@ function Footer() {
                     <h3 className="footer_text_header mb-6">MAY WE HELP YOU?</h3>
 
                     <div className="lg:pb-0 pb-6">
-                      {mayWeHelpYou.map((item) => (
+                      {MayWeHelpYouItems.map((item) => (
                         <div key={item.text} className="pb-6">
                           <Link href={item.href} className="footer_text text_hover_underline text_hover_underline_white">
                             {item.text}
@@ -86,8 +86,8 @@ function Footer() {
                     </div>
 
                     <div className="footer_text_wrapper">
-                      {theCompany.map((item, index) => (
-                        <div key={item.text} className={`${index === theCompany.length - 1 ? 'pb-12' : 'pb-6'}`}>
+                      {TheCompanyItems.map((item, index) => (
+                        <div key={item.text} className={`${index === TheCompanyItems.length - 1 ? 'pb-12' : 'pb-6'}`}>
                           <Link href={item.href} className="footer_text text_hover_underline text_hover_underline_white">
                             {item.text}
                           </Link>
@@ -103,7 +103,7 @@ function Footer() {
                     <h3 className="footer_text_header mb-6">THE COMPANY</h3>
 
                     <div className="lg:pb-0 pb-6">
-                      {theCompany.map((item) => (
+                      {TheCompanyItems.map((item) => (
                         <div key={item.text} className="pb-6">
                           <Link href={item.href} className="footer_text text_hover_underline text_hover_underline_white">
                             {item.text}
@@ -124,8 +124,8 @@ function Footer() {
                     </div>
 
                     <div className="footer_text_wrapper">
-                      {stillbrokeServices.map((item, index) => (
-                        <div key={item.text} className={`${index === stillbrokeServices.length - 1 ? 'pb-12' : 'pb-6'}`}>
+                      {StillbrokeServicesItems.map((item, index) => (
+                        <div key={item.text} className={`${index === StillbrokeServicesItems.length - 1 ? 'pb-12' : 'pb-6'}`}>
                           <Link href={item.href} className="footer_text text_hover_underline text_hover_underline_white">
                             {item.text}
                           </Link>
@@ -141,7 +141,7 @@ function Footer() {
                     <h3 className="footer_text_header mb-6">STILLBROKE SERVICES</h3>
 
                     <div className="lg:pb-0 pb-6">
-                      {stillbrokeServices.map((item) => (
+                      {StillbrokeServicesItems.map((item) => (
                         <div key={item.text} className="pb-6">
                           <Link href={item.href} className="footer_text text_hover_underline text_hover_underline_white">
                             {item.text}
@@ -173,11 +173,11 @@ function Footer() {
                   </div>
                 </div>
 
-                <form className="w-full relative">
-                  <div className="form_input h-11 w-full relative flex flex-col justify-center">
-                    <input type="text" className="input" />
+                <form className="w-full relative footer_form_control">
+                  <div className="footer_form_input_wrapper h-11 w-full relative flex flex-col justify-center">
+                    <input type="text" className="footer_form_input" />
                     <div className="underline"></div>
-                    <label htmlFor="" className="label">Email</label>
+                    <label htmlFor="" className="footer_form_label">Email</label>
                   </div>
                   
                   <span className="submit_btn_wrapper">

@@ -29,9 +29,12 @@ function Services() {
   return (
     <section className="w-full h-full">
       <div className="pt-20 pb-4 lg:pb-8 lg:px-16 px-4 text-center m-auto flex items-center justify-center">
-        <h2 className="section_text_title max-w-[800px] text-black">
+        <h3 
+          className="text-black mx-auto 
+          lg:text-lg text-base uppercase font-bold"
+        >
           Stillbroke Services
-        </h2>
+        </h3>
       </div>
       
       <div className="container custom_grid gap-2 pt-4 lg:pt-8 pb-12 lg:px-16 md:px-8 px-4 overflow-x-auto">

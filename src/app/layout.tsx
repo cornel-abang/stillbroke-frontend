@@ -1,9 +1,14 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
-
 import './globals.css'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
+
+import { CartProvider } from '../context/cart.context'
+import { VisibilityProvider } from '../context/visibility.context'
 import Footer from '../layouts/general/footer'
 import Header from '../layouts/general/header'
+import SearchFlyout from '../components/flyouts/searchFlyout'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -22,10 +27,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <Header />
-        {children}
-        <Footer />
+      <body className={`${poppins.className} antialiased`}>
+        <CartProvider>
+          <VisibilityProvider>
+            <Header />
+            {children}
+            <SearchFlyout />
+            <ToastContainer />
+            <Footer />
+          </VisibilityProvider>
+        </CartProvider>
       </body>
     </html>
   )

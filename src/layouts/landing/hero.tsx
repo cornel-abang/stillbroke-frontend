@@ -1,47 +1,79 @@
-import Image from "next/image"
-import Link from "next/link"
+import Link from "next/link";
+import Image from "next/image";
+
+import HeroDarkBg from '../../../public/images/hero_dark_bg.webp';
+import HeroMobileBg from '../../../public/images/hero_mobile_bg.webp';
 
 function Hero() {
   return (
-    <section 
-      className="lg:pt-10 pt-12 w-full text-center relative mx-auto 
-      flex flex-col bg-white lg:pb-12 justify-center items-center"
-    >
-      <div className="lg:pb-0 pb-12 bg-white h-fit w-fit m-auto relative">
-        <div className="hero_mediaContainer">
-          <div className="w-screen flex justify-center">
-            <div className="relative">
-              <Link href="/#" className="linkWrapper">
-                <span className="sr_only"></span>
-              </Link>
+    <>
+      {/* Desktop View */}
+      <section className="md:block hidden">
+        <Link href="/#" className="block relative h-[100vh]">
+          {/* <Link className="linkWrapper">
+            <span className="sr_only"></span>
+          </Link> */}
 
-              <div className="hero_imageWrapper">
-                <Image 
-                  src="/images/hero_image.webp" 
-                  alt="hero" 
-                  className="w-full h-full object-cover" 
-                  width={800}
-                  height={800}
-                  priority
-                />
-              </div>
-            </div>
+          <div className="h-full flex">
+            <Image 
+              src={HeroDarkBg} 
+              alt="hero" 
+              className="max-w-full w-2/4 h-full object-cover object-[50%_50%] transition-all opacity-100" 
+            />
+            <video 
+              preload="auto" 
+              autoPlay 
+              playsInline 
+              loop 
+              muted 
+              className="max-w-full w-2/4 h-full object-cover object-[50%_50%] transition-all opacity-100" 
+            >
+              <source 
+                src="/images/video.mp4" 
+                type="video/mp4" 
+              />
+            </video>
           </div>
-        </div>
 
-        <div className="mt-10">
-          <div>
-            <h2 className="section_text_title hero_text_title">Stillbroke Valigeria</h2>
+          <div className="text-white flex flex-col justify-end absolute top-4 bottom-4 left-16 right-16">
+            <p className="md:absolute top-2/4 text-sm">
+              EXPLORE OUR SHOP
+            </p>
 
-            <span className="inline-block max-w-fit">
-              <Link href="/#" className="cta bg-black text-white opacity-100 py-4 px-6">
-                Explore Now
-              </Link>
-            </span>
+            {/* <p className="md:absolute top-2/4 right-0 text-sm">
+              <span className="">SHOP NOW</span>
+            </p> */}
           </div>
-        </div>
-      </div>
-    </section>
+        </Link>
+      </section>
+      
+      {/* Mobile View */}
+      <section className="block md:hidden">
+        <Link href="/#" className="block relative h-[90vh]">
+          {/* <Link className="linkWrapper">
+            <span className="sr_only"></span>
+          </Link> */}
+
+          <div className="h-full flex">
+            <Image 
+              src={HeroMobileBg} 
+              alt="hero" 
+              className="max-w-full w-full h-full object-cover object-[50%_50%] transition-all opacity-100" 
+            />
+          </div>
+
+          <div className="text-white flex flex-col justify-end absolute top-4 bottom-4 left-4 right-4">
+            <p className="text-sm">
+              EXPLORE OUR SHOP
+            </p>
+
+            {/* <p className="text-sm">
+              <span className="">SHOP NOW</span>
+            </p> */}
+          </div>
+        </Link>
+      </section>
+    </>
   )
 }
 

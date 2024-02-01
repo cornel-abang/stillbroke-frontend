@@ -17,6 +17,12 @@ const config: Config = {
     colors: {
       'black': '#000',
       'white': '#fff',
+      'error': '#d7373d',
+      'discount': '#d7373d',
+      'input_border': '#c8c6c5',
+      'product_card_text': '#696969',
+      'text_strikeout': '#696969',
+      'lightGray': '#dbd8d6'
     },
     extend: {
       borderRadius: {
@@ -27,3 +33,5 @@ const config: Config = {
   plugins: [],
 }
 export default config
+
+
