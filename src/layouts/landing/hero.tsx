@@ -9,7 +9,7 @@ function Hero() {
     <>
       {/* Desktop View */}
       <section className="md:block hidden">
-        <Link href="/#" className="block relative h-[100vh]">
+        <div className="block relative h-[100vh]">
           {/* <Link className="linkWrapper">
             <span className="sr_only"></span>
           </Link> */}
@@ -37,20 +37,20 @@ function Hero() {
           </div>
 
           <div className="text-white flex flex-col justify-end absolute top-4 bottom-4 left-16 right-16">
-            <p className="md:absolute top-2/4 text-sm">
+            <Link href="/store/categories" className="md:absolute top-2/4 text-sm">
               EXPLORE OUR SHOP
-            </p>
+            </Link>
 
             {/* <p className="md:absolute top-2/4 right-0 text-sm">
               <span className="">SHOP NOW</span>
             </p> */}
           </div>
-        </Link>
+        </div>
       </section>
       
       {/* Mobile View */}
       <section className="block md:hidden">
-        <Link href="/#" className="block relative h-[90vh]">
+        <div className="block relative h-[90vh]">
           {/* <Link className="linkWrapper">
             <span className="sr_only"></span>
           </Link> */}
@@ -64,15 +64,15 @@ function Hero() {
           </div>
 
           <div className="text-white flex flex-col justify-end absolute top-4 bottom-4 left-4 right-4">
-            <p className="text-sm">
+            <Link href="/shop/categories" className="text-sm">
               EXPLORE OUR SHOP
-            </p>
+            </Link>
 
             {/* <p className="text-sm">
               <span className="">SHOP NOW</span>
             </p> */}
           </div>
-        </Link>
+        </div>
       </section>
     </>
   )

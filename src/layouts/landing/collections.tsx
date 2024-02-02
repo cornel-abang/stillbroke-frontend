@@ -25,7 +25,7 @@ function Collections() {
             <div className="md:h-[25vh] md:w-full"></div>
             <div className="lg:bottom-10 lg:sticky relative text-center w-[calc(100vw-2rem)] lg:mb-20 lg:w-auto mt-auto mx-auto mb-8">
               <h3 className="section_text_title collection_text_title">Collection 1</h3>
-              <Link href="/#" className="text_hover_underline text_hover_underline_white text-white">
+              <Link href="/shop/categories" className="text_hover_underline text_hover_underline_white text-white">
                 Explore The Collection
               </Link>
             </div>
@@ -52,7 +52,7 @@ function Collections() {
             <div className="md:h-[25vh] md:w-full"></div>
             <div className="lg:bottom-10 lg:sticky relative text-center w-[calc(100vw-2rem)] lg:mb-20 lg:w-auto mt-auto mx-auto mb-8">
               <h3 className="section_text_title collection_text_title">Collection 2</h3>
-              <Link href="/#" className="text_hover_underline text_hover_underline_white text-white">
+              <Link href="/shop/categories" className="text_hover_underline text_hover_underline_white text-white">
                 Explore The Collection
               </Link>
             </div>
@@ -81,7 +81,7 @@ function Collections() {
             <div className="md:h-[25vh] md:w-full"></div>
             <div className="lg:bottom-10 lg:sticky relative text-center w-[calc(100vw-2rem)] lg:mb-20 lg:w-auto mt-auto mx-auto mb-8">
               <h3 className="section_text_title collection_text_title">Collection 3</h3>
-              <Link href="/#" className="text_hover_underline text_hover_underline_white text-white">
+              <Link href="/shop/categories" className="text_hover_underline text_hover_underline_white text-white">
                 Explore The Collection
               </Link>
             </div>
@@ -108,7 +108,7 @@ function Collections() {
             <div className="md:h-[25vh] md:w-full"></div>
             <div className="lg:bottom-10 lg:sticky relative text-center w-[calc(100vw-2rem)] lg:mb-20 lg:w-auto mt-auto mx-auto mb-8">
               <h3 className="section_text_title collection_text_title">Collection 4</h3>
-              <Link href="/#" className="text_hover_underline text_hover_underline_white text-white">
+              <Link href="/shop/categories" className="text_hover_underline text_hover_underline_white text-white">
                 Explore The Collection
               </Link>
             </div>

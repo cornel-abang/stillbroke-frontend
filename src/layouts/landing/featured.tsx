@@ -38,7 +38,7 @@ function Featured() {
               >
                 <h2 className="text-2xl font-semibold">New Arrivals.</h2>
                 <p className="text-base font-normal">
-                  <Link href="/#" className="underline cursor-pointer">
+                  <Link href="/shop/categories" className="underline cursor-pointer">
                     Explore
                   </Link>
                 </p>
