@@ -26,7 +26,7 @@ function Product() {
             </Link>
 
             <div className="group relative overflow-hidden bg-[#dcdbdb] aspect-[3/3.95257] select-none touch-pan-y">
-              <Link href="/#">
+              <Link href="/shop/categories/1">
                 <div
                   style={{ backgroundImage: `url(/images/product1.png)` }}
                   className='w-full h-full bg-center bg-contain bg-no-repeat duration-300 bg-none group-hover:hidden'
@@ -38,7 +38,9 @@ function Product() {
                 ></div>
               </Link>
               <div className="absolute bottom-0 text-center w-full p-[10px] bg-[#ffffffb3] hidden group-hover:block">
-                <Link href="/#" className="font-medium static text-xs hover:underline">QUICK SHOP</Link>
+                <Link href="/shop/categories/1" className="font-medium static text-xs hover:underline">
+                  QUICK SHOP
+                </Link>
               </div>
             </div>
           </div>
@@ -46,7 +48,7 @@ function Product() {
 
         <div className="pt-3 pb-12">
           <div className="text-ellipsis overflow-hidden">
-            <Link href="/#" className="mb-2 text-black">
+            <Link href="/shop/categories/1" className="mb-2 text-black">
               <span className="text-product_card_text hover:text-black capitalize text-xs font-medium">
                 Intense Power Micro 3-Pack Low Rise Trunk
               </span>

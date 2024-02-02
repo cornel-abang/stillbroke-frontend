@@ -12,6 +12,10 @@ const beyondFont = localFont({
   src: '../font/beyond-wonderland/Beyond-Wonderland.ttf',
   display: 'swap',
 })
+const gutsyFont = localFont({
+  src: '../font/gutsy/Gutsy-Bold.ttf',
+  display: 'swap',
+})
 
 export default function Home() {
   return (
@@ -27,7 +31,9 @@ export default function Home() {
               whileInView='show'
               viewport={{once: false, amount: 0.7}}
             >
-              <h4 className="md:text-3xl text-2xl mb-5">STYLE . ATTITUDE . STREET . CULTURE</h4>
+              <h4 className={`md:text-5xl text-3xl mb-5 ${gutsyFont.className}`}>
+                STYLE . ATTITUDE . STREET . CULTURE
+              </h4>
               <p className={`md:text-3xl text-2xl font-light ${beyondFont.className}`}>
                 Hustle like you’re 
                 <span className="text-[#FF0000] font-medium"> Still </span> 
