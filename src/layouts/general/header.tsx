@@ -7,18 +7,22 @@ import { usePathname } from "next/navigation";
 
 import AccountFlyout from '../../components/flyouts/accountFlyout';
 import CartFlyout from '../../components/flyouts/cartFlyout';
+import MobileViewFlyout from '../../components/flyouts/mobileViewFlyout';
 import { useVisibility } from "../../context/visibility.context";
+
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [accountFlyout, setAccountFlyout] = useState(false);
   const [cartFlyout, setCartFlyout] = useState(false);
+  const [mobileViewFlyout, setMobileViewFlyout] = useState(false);
   const pathname = usePathname();
 
   const { toggleSearch } = useVisibility();
 
   const toggleAccount = () => setAccountFlyout(!accountFlyout);
   const toggleCart = () => setCartFlyout(!cartFlyout);
+  const toggleMobileView = () => setMobileViewFlyout(!mobileViewFlyout);
 
 
   useEffect(() => {
@@ -45,7 +49,7 @@ function Header() {
         <nav className="block">
           <div className="w-full py-4 xl:px-16 md:px-6 px-4 mx-auto">
             <div className="lg:min-h-[5.1875px] h-auto flex justify-between items-center">
-              <div className={`md:flex hidden`}>
+              <div className={`md:flex hidden w-[40%]`}>
                 <div 
                   className={`flex items-center uppercase ${pathname.startsWith('/auth') || pathname.startsWith('/shop') 
                     ? 'text-black' 
@@ -76,26 +80,44 @@ function Header() {
                   </span>
                 </div>
               </div>
+              
+              <div className="w-[20%] flex md:justify-center justify-start">
+                <Link 
+                  href="/" 
+                  className="hidden md:inline-block"
+                >
+                  <Image 
+                    src="/images/stillbroke_banner_logo2.webp" 
+                    alt="stillbroke banner logo"
+                    width={48} 
+                    height={40}
+                    style={{
+                      width: 'auto'
+                    }}
+                    className={`object-contain w-full`}
+                    priority
+                  />
+                </Link>
 
-              <Link 
-                href="/" 
-                className="block"
-              >
-                <Image 
-                  src="/images/stillbroke_banner_logo2.webp" 
-                  alt="stillbroke banner logo"
-                  width={48} 
-                  height={40}
-                  style={{
-                    width: 'auto',
-                    height: 'auto'
-                  }}
-                  className={`object-contain w-full`}
-                  priority
-                />
-              </Link>
+                <Link 
+                  href="/" 
+                  className="inline-block md:hidden"
+                >
+                  <Image 
+                    src="/images/stillbroke_banner_logo2.webp" 
+                    alt="stillbroke banner logo"
+                    width={30} 
+                    height={20}
+                    style={{
+                      width: 'auto'
+                    }}
+                    className={`object-contain w-full`}
+                    priority
+                  />
+                </Link>
+              </div>
 
-              <div className="flex relative">
+              <div className="flex relative w-[40%] justify-end">
                 <>
                   <ul className="flex items-center relative">
                     <li className="lg:pl-5 pl-4 flex items-center">
@@ -200,6 +222,35 @@ function Header() {
                       </button>
 
                       {cartFlyout && <CartFlyout toggleCart={toggleCart}  />}
+                    </li>
+
+                    <li className="lg:pl-5 pl-4 md:hidden flex items-center">
+                      <button 
+                        onClick={toggleMobileView}
+                        className="text-black inline-flex relative"
+                      >
+                        <span className="w-6 h-6 relative inline-flex items-center justify-center">
+                          <svg 
+                            className="" 
+                            width="24" 
+                            height="24" 
+                            viewBox="0 0 24 24" 
+                            fill="none" 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            aria-hidden="true"
+                          >
+                            <path 
+                              d="M20 6.5H4V5H20V6.5ZM20 11.25H4V12.75H20V11.25ZM20 17.5H4V19H20V17.5Z" 
+                              className={`text-lg ${pathname.startsWith('/auth') || pathname.startsWith('/shop') 
+                                ? 'fill-black' 
+                                : `${scrolled ? 'fill-black' : 'fill-white'}`}`
+                              }
+                            ></path>
+                          </svg>
+                        </span>
+                      </button>
+
+                      {mobileViewFlyout && <MobileViewFlyout toggleMobileView={toggleMobileView}  />}
                     </li>
                   </ul>
                 </>

@@ -121,3 +121,15 @@ export const PopularCategories = [
         href: '/#'
     },
 ]
+
+// Account Flyout Links
+export const MobileViewItems = [
+    {
+        text: 'About',
+        href: '/about-stillbroke'
+    },
+    {
+        text: 'Shop',
+        href: '/shop/categories'
+    },
+]
