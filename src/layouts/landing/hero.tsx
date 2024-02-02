@@ -17,6 +17,7 @@ function Hero() {
           <div className="h-full flex">
             <Image 
               src={HeroDarkBg} 
+              priority
               alt="hero" 
               className="max-w-full w-2/4 h-full object-cover object-[50%_50%] transition-all opacity-100" 
             />
