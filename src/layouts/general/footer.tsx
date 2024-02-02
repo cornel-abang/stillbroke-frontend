@@ -9,7 +9,7 @@ import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
 import { MayWeHelpYouItems, StillbrokeServicesItems, TheCompanyItems } from "../../constants/index";
 
 function Footer() {
-  const [toggle1, setToggle1] = useState(false);
+  const [toggle1, setToggle1] = useState(true);
   const [toggle2, setToggle2] = useState(false);
   const [toggle3, setToggle3] = useState(false);
 

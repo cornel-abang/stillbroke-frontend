@@ -29,7 +29,7 @@ function Featured() {
                 className="rounded-sm w-full h-full" 
               />
             </div>
-            <div className="border-r-2 border-black">
+            <div className="border-r-2 border-[#FF0000]">
               <motion.div 
                 variants={fadeIn('up', 0.2)} 
                 initial='hidden'
@@ -38,7 +38,7 @@ function Featured() {
               >
                 <h2 className="text-2xl font-semibold">New Arrivals.</h2>
                 <p className="text-base font-normal">
-                  <Link href="/#" className="text_hover_underline text_hover_underline_black cursor-pointer">
+                  <Link href="/#" className="underline cursor-pointer">
                     Explore
                   </Link>
                 </p>
@@ -47,7 +47,7 @@ function Featured() {
           </div>
 
           <div className="flex flex-col gap-y-6 md:gap-y-20 text-left lg:w-[50%] w-full">
-            <div className="border-l-2 border-black md:px-6">
+            <div className="border-l-2 border-[#FF0000] md:px-6">
               <motion.div 
                 variants={fadeIn('up', 0.2)} 
                 initial='hidden'
